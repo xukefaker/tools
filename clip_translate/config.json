@@ -1,0 +1,7 @@
+{
+  "key": "YOUR_API_KEY",
+  "prompt": "请将以下内容翻译成中文：",
+  "font_size": 18,
+  "font_family": "黑体",
+  "storage_file_path": "storage.txt"
+}
