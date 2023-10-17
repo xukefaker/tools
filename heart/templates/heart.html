@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>LOVE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 500px;
+  overflow: hidden;
+}
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  top: 50%;
+  left: 50%;
+  margin-top: -45px;
+  margin-left: -50px;
+}
+.heart:before, .heart:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: linear-gradient(70deg, blue, pink);;
+  border-radius: 50px 50px 0 0;
+}
+.heart:before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+.heart-bg {
+  animation: heart-anim 1s linear 0.4s infinite;
+}
+.heart-bg:before, .heart-bg:after {
+  background-color: #ff7693;
+}
+.heart-main {
+  animation: pounding 0.5s linear infinite alternate;
+}
+@keyframes pounding {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes heart-anim {
+  46% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  52% {
+    transform: scale(1.5);
+  }
+  55% {
+    transform: scale(3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(50);
+  }
+}
+
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="heart heart-bg"></div>
+<div class="heart heart-main"></div>
+<!-- partial -->
+
+</body>
+</html>

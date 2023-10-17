@@ -19,6 +19,7 @@ fontExample = tkFont.Font(family=config['font_family'], size=config['font_size']
 text.configure(font=fontExample)
 root.wm_attributes('-topmost', 1)
 
+
 def save_result():
     global pasted_flag, text
     while True:

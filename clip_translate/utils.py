@@ -46,3 +46,7 @@ class chatGPTInstance():
         res = conn.getresponse()
         data = json.loads(res.read())
         return data['choices'][0]['message']['content']
+
+class baiduTranslatorInstance():
+    def __init__(self, config):
+        pass
